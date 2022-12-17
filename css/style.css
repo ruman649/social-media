@@ -1,0 +1,423 @@
+/* 
+
+table of contents
+1. general 
+2. navbar 
+3. banner
+4. client
+5. about 
+6. features
+7. pricing
+8. testimonial
+9. brands
+10. faqs
+11. footer 
+
+*/
+
+
+
+
+/* general section start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/* background color  */
+:root {
+    --bg-black: #090b3e;
+    --bg-white: #fff;
+    --bg-light: #fcfcfc;
+    --bg-light-2: #f2f7fa;
+    --bg-dark-green: #0e9d80;
+    --bg-f-1: #fff6d6;
+    --bg-f-2: #ebdcf9;
+    --bg-f-3: #ddf5fc;
+    --bg-f-4: #dcf6e1;
+    --bg-f-5: #f8e4e1;
+    --bg-f-6: #fbffd4;
+}
+
+/* text-color  */
+:root {
+    --t-black: #000;
+    --t-white: #fff;
+    --t-dark-gray: #4c535d;
+    --t-light: #798089;
+    --t-light-2: #5e5e72;
+    --t-light-3: #a0a0a0;
+    --t-dark-green: #12c4a0;
+    --t-orange: #ff5d2a;
+    --t-yellow: #ffc100;
+}
+
+/* fonts  */
+:root {
+    --f-primary: 'Quicksand';
+    --f-secondary: 'Poppins', sans-serif;
+}
+
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--f-primary);
+    font-weight: 700;
+    background-color: white;
+}
+
+.btn-main {
+    border: 1px solid var(--t-light-2);
+    font-weight: 600;
+    transition: all 0.2s ease-in;
+    text-transform: capitalize;
+}
+
+.btn-main:hover {
+    background-color: var(--bg-black) !important;
+    color: white !important;
+
+}
+
+.btn-second {
+    background-color: var(--bg-black);
+    color: var(--t-white);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.btn-second:hover {
+    border: 1px solid var(--t-dark-gray) !important;
+    transition: all 0.4s ease-in-out;
+}
+
+.wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+    font-family: var(--f-secondary);
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 1rem;
+    text-transform: capitalize;
+    line-height: 1rem;
+    font-weight: 400;
+    font-family: var(--f-secondary);
+}
+
+/* general section end */
+
+
+
+/* navbar  */
+#header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-white);
+}
+
+#header img {
+    max-width: 250px;
+}
+
+#header .navbar-nav .nav-link.active {
+    color: var(--bg-dark-green)
+}
+
+
+.navbar.scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    box-shadow: 2px 5px 14px #888888;
+    z-index: 1000;
+}
+
+
+
+
+/* banner section  */
+#home {
+    background: url('../asset/bg.png') no-repeat center;
+    background-size: cover;
+    padding-top: 4rem;
+}
+
+#home span {
+    color: var(--t-dark-green);
+}
+
+#home img {
+    z-index: -10;
+    width: 100%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+
+    }
+
+    50% {
+        transform: translateY(20px);
+        /* transform: scale(1.1); */
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+/* trusted clients  */
+.client {
+    background-color: var(--bg-light-2);
+}
+
+.client .number-one .item {
+    /* border: 1px solid var(--t-light-3); */
+    padding: 2rem;
+}
+
+.client .number-one img {
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/* start about section  */
+#about .bg {
+    background-color: rgb(241, 241, 241);
+}
+
+#about .counter {
+    background-color: white;
+}
+
+#about .counter h2 {
+    color: var(--t-orange);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#about .counter p {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--t-dark-gray);
+}
+
+
+
+/* features start  */
+#features {
+    background-color: var(--bg-light-2);
+}
+
+.features-items div {
+    padding: 1.5rem 1rem;
+}
+
+.features-items h3 {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
+
+.features-items .f1 {
+    background-color: var(--bg-f-1);
+    border-radius: 25px;
+}
+
+.features-items .f1::before {
+    content: url('/asset/consultancy.png');
+    position: absolute;
+    margin-top: -50px;
+    /* display: block; */
+}
+
+.features-items .f2 {
+    background-color: var(--bg-f-2);
+    border-radius: 25px;
+}
+
+.features-items .f2::before {
+    content: url('/asset/solutions.png');
+    position: absolute;
+    margin-top: -50px;
+}
+
+.features-items .f3 {
+    background-color: var(--bg-f-3);
+    border-radius: 25px;
+}
+
+.features-items .f3::before {
+    content: url('/asset/simple.png');
+    position: absolute;
+    margin-top: -50px;
+}
+
+.features-items .f4 {
+    background-color: var(--bg-f-4);
+    border-radius: 25px;
+}
+
+.features-items .f4::before {
+    content: url('/asset/deadline.png');
+    position: absolute;
+    margin-top: -50px;
+}
+
+.features-items .f5 {
+    background-color: var(--bg-f-5);
+    border-radius: 25px;
+}
+
+.features-items .f5::before {
+    content: url('/asset/data.png');
+    position: absolute;
+    margin-top: -50px;
+}
+
+.features-items .f6 {
+    background-color: var(--bg-f-6);
+    border-radius: 25px;
+}
+
+.features-items .f6::before {
+    content: url('/asset/flexible.png');
+    position: absolute;
+    margin-top: -50px;
+}
+
+/* features end */
+
+
+
+
+
+/* pricing start here  */
+.pricing-box {
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+
+.pricing-box .text-center {
+    box-shadow: 1px 2px 4px var(--t-light-3);
+}
+
+.pricing-box .text-center:hover {
+    border: 1px solid var(--t-light);
+}
+
+
+
+
+
+
+/* tree-trial */
+#tree-trial {
+    background-color: var(--bg-f-3);
+}
+
+
+
+
+
+/* testimonial  */
+.test-card {
+    box-shadow: 0 5px 40px rgb(224, 220, 220);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.test-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--f-secondary);
+    color: var(--t-dark-green);
+    text-transform: capitalize;
+}
+
+
+/* happy clients  */
+#clients .lists img {
+    /* border: 1px solid var(--t-light); */
+    padding: 2rem;
+    box-shadow: 0px 2px 12px var(--t-light-3);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+#clients .lists img:hover{
+    transform: scale(1.1);
+}
+
+
+
+/* faqs  */
+#faqs button{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+#faqs button:hover,
+#faqs button:focus{
+    color: var(--bg-dark-green);
+    background-color: white;
+}
+.accordion-item{
+border: none;
+background-color: white;
+}
+
+
+#footer{
+    background-color: var(--bg-black);
+}
+#footer img{
+    max-width: 200px;
+
+}
